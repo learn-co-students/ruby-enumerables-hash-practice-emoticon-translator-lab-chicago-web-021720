@@ -19,8 +19,11 @@ def load_library(file_path)
   {:get_meaning => meanings, :get_emoticon => emoticons}
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(yaml_file, emoticon)
   # code goes here
+  data = load_library(yaml_file)
+  newemoticon = data[:get_emoticon][emoticon]
+  returnvalue = newemoticon ? newemoticon : "apology message"
 end
 
 def get_english_meaning
