@@ -30,5 +30,5 @@ def get_english_meaning(yaml_file, emoticon)
   # code goes here
   data = load_library(yaml_file)
   returndata = data[:get_meaning][emoticon]
-  returndata = returndata ? returndata : "Sorry, that meaning was not found"
+  returndata = returndata ? returndata : "Sorry, that emoticon was not found"
 end
