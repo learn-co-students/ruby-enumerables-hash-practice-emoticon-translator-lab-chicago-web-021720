@@ -23,9 +23,12 @@ def get_japanese_emoticon(yaml_file, emoticon)
   # code goes here
   data = load_library(yaml_file)
   newemoticon = data[:get_emoticon][emoticon]
-  returnvalue = newemoticon ? newemoticon : "apology message"
+  returnvalue = newemoticon ? newemoticon : "Sorry, that emoticon was not found"
 end
 
-def get_english_meaning
+def get_english_meaning(yaml_file, emoticon)
   # code goes here
+  data = load_library(yaml_file)
+  returndata = data[:get_meaning][emoticon]
+  returndata = returndata ? returndata : "Sorry, that meaning was not found"
 end
